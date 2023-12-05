@@ -39,7 +39,7 @@
 			<p id="info"></p>
 		</form>
 
-		
+
 
 		<?php
 

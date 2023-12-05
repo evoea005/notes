@@ -54,7 +54,7 @@
 				exit();
 			}
 
-			
+
 			$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
 
 			//Sjekk om kobling virker
@@ -70,16 +70,16 @@
 			$sql = "SELECT * FROM user WHERE username = '$username_form' AND password = '$password_form'";
 
 			$resultat = $kobling->query($sql);
-				if ($resultat->num_rows == 1) {
-						// login
-						session_start();
-						$_SESSION["username"] = $username_form;
-						header("Location: /editor/editor");
-						exit();
-				} else {					
-					echo "<script>message('invalid login');</script>";
-					exit();
-				}
+			if ($resultat->num_rows == 1) {
+				// login
+				session_start();
+				$_SESSION["username"] = $username_form;
+				header("Location: /editor/editor");
+				exit();
+			} else {
+				echo "<script>message('invalid login');</script>";
+				exit();
+			}
 
 
 		}
