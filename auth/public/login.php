@@ -88,18 +88,3 @@
 </body>
 
 </html>
-
-<script>
-	function message(text) {
-		document.querySelector("#p").innerHTML = text;
-	}
-
-	document.querySelector("button").onclick = function (e) {
-		if (!document.getElementById('agree').checked) {
-			alert("kys");
-			e.preventDefault();
-			e.stopPropagation();
-		}
-
-	}
-</script>

@@ -116,7 +116,7 @@
 
 	document.querySelector("button").onclick = function (e) {
 		if (!document.getElementById('agree').checked) {
-			alert("kys");
+			alert("no");
 			e.preventDefault();
 			e.stopPropagation();
 		}
