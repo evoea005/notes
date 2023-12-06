@@ -1,7 +1,8 @@
-html, body {
+html,
+body {
 	background-color: #161c21;
 	color: #dfdfdf;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -16,6 +17,9 @@ main {
 
 .ql-toolbar.ql-snow {
 	text-align: left;
+	border-radius: 10px 10px 0 0;
+	background-color: #1f2831;
+	box-shadow: 10px 10px 10px #00000033;
 }
 
 .ql-snow .ql-stroke {
@@ -32,4 +36,10 @@ main {
 
 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
 	border-color: #2e3942;
+}
+
+#editor {
+	background-color: #0b1117;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 10px 10px 10px #00000033;
 }
