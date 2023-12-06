@@ -10,28 +10,33 @@
 
 <body>
 	<main>
-		<script>
-			function message(text) {
-				document.querySelector("#info").innerHTML = text;
-			}
-		</script>
-
 		<form method="post">
-			<h1>log in</h1>
+			<h1>Log in</h1>
 			<div>
-				<label for="username">username:</label>
+				<label for="username">Username:</label>
 				<input type="text" name="username" id="username">
 			</div>
 			<div>
-				<label for="password">password:</label>
+				<label for="password">Password:</label>
 				<input type="password" name="password" id="password">
 			</div>
-			<button type="submit" name="submit">log in</button>
-			<footer>no account? <a href=" ./register">register here</a></footer>
+			<button type="submit" name="submit">Log in</button>
+			<footer>No account? <a href=" ./register">Register here</a></footer>
 
 			<p id="info"></p>
 		</form>
 
+		<script>
+			document.querySelector("#info").addEventListener("click", function() {
+				document.querySelector("#info").innerHTML = "";
+				document.querySelector("#info").style.display = "none";
+			});
+
+			function message(text) {
+				document.querySelector("#info").innerHTML = text;
+				document.querySelector("#info").style.display = "block";
+			}
+		</script>
 
 
 		<?php
@@ -49,8 +54,9 @@
 			$username_form = $_POST["username"];
 			$password_form = hash("sha256", $_POST["password"]);
 
+
 			if (!ctype_alnum($username_form)) {
-				echo "<script>message('username can only contain letters and numbers');</script>";
+				echo "<script>message('Invalid username!');</script>";
 				exit();
 			}
 
@@ -77,7 +83,7 @@
 				header("Location: /editor/editor");
 				exit();
 			} else {
-				echo "<script>message('invalid login');</script>";
+				echo "<script>message('Wrong username or password!');</script>";
 				exit();
 			}
 
