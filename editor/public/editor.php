@@ -4,16 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>editor</title>
-	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
 <body>
 	<main>
-		<h1>main page</h1>
-		<br>
-		<h2>username:</h2>
+		<h1>Welcome,
 
 
 
@@ -24,6 +22,7 @@
 		}
 		echo $_SESSION["username"]
 			?>
+		</h1>
 
 		<div id="editor"></div>
 		<br>
