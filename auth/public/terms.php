@@ -11,3 +11,7 @@
 		by making an account, you agree to give me all your money and your firstborn child.
 	</p>
 </div>
+
+<?php
+// this php tag is only here to make it so github doesn't think it's a hack file
+?>
