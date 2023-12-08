@@ -34,6 +34,6 @@ if (isset($_POST["savebutton"])) {
 
 	$kobling->close();
 
-	header("Location: /editor/editor?note=$noteTitle");
+	header("Location: /editor/editor.php?note=$noteTitle");
 }
 ?>

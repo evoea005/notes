@@ -36,11 +36,11 @@
 				<label for="agree">
 					<input type="checkbox" name="agree" id="agree" value="yes" /> I agree
 					with the
-					<a href="./terms" title="term of services">Terms of Service</a>
+					<a href="./terms.php" title="term of services">Terms of Service</a>
 				</label>
 			</div>
 			<button type="submit" name="submit">Register</button>
-			<footer>Already have an account? <a href=" ./login">Login here</a></footer>
+			<footer>Already have an account? <a href=" ./login.php">Login here</a></footer>
 
 			<p id="info"></p>
 		</form>
@@ -98,7 +98,7 @@
 					$sql = "INSERT INTO user (username, password) VALUES ('$username_form', '$password_form')";
 
 					if ($kobling->query($sql)) {
-						header("Location: ./login");
+						header("Location: ./login.php");
 					} else {
 						echo "Noe gikk galt med spørringen $sql ($kobling->error).";
 					}

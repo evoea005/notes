@@ -21,7 +21,7 @@
 				<input type="password" name="password" id="password">
 			</div>
 			<button type="submit" name="submit">Log in</button>
-			<footer>No account? <a href=" ./register">Register here</a></footer>
+			<footer>No account? <a href=" ./register.php">Register here</a></footer>
 
 			<p id="info"></p>
 		</form>
@@ -80,7 +80,7 @@
 				// login
 				session_start();
 				$_SESSION["username"] = $username_form;
-				header("Location: /editor/editor");
+				header("Location: /editor/editor.php");
 				exit();
 			} else {
 				echo "<script>message('Wrong username or password!');</script>";

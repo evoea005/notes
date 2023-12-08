@@ -16,7 +16,7 @@
 
 			session_start();
 			if (!isset($_SESSION["username"])) {
-				header("Location: /auth/login");
+				header("Location: /auth/login.php");
 			}
 
 			$username = $_SESSION["username"];
@@ -47,7 +47,7 @@
 					$title = $rad["title"];
 
 					echo "<div class='savedNote'>";
-					echo "<a href='/editor/editor?note=$title'>$title</h1>";
+					echo "<a href='/editor/editor.php?note=$title'>$title</h1>";
 					echo "</div>";
 				}
 			} else {

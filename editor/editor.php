@@ -16,7 +16,7 @@
 				<?php
 				session_start();
 				if (!isset($_SESSION["username"])) {
-					header("Location: /auth/login");
+					header("Location: /auth/login.php");
 				}
 				echo $_SESSION["username"]
 					?>
