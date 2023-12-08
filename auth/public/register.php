@@ -73,22 +73,19 @@
 					exit();
 				}
 
-				//Opprette kobling
 				$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
 
-				//Sjekk om kobling virker
+				// check if connection works
 				if ($kobling->connect_error) {
 					die("Noe gikk galt: " . $kobling->connect_error);
 				}
 
-				//Angi UTF-8 som tegnsett
 				$kobling->set_charset("utf8");
 
-				//Lagrer feltene i variable
 				$username_form = $_POST["username"];
 				$password_form = hash('sha256', $_POST["password"]);
 
-				// check if username exists
+				// check if username already exists
 				$sql = "SELECT * FROM user WHERE username = '$username_form'";
 
 				$resultat = $kobling->query($sql);
@@ -101,7 +98,7 @@
 					$sql = "INSERT INTO user (username, password) VALUES ('$username_form', '$password_form')";
 
 					if ($kobling->query($sql)) {
-						header("Location: ./login"); // Oppdaterer siden så de nye resultatene blir vist
+						header("Location: ./login");
 					} else {
 						echo "Noe gikk galt med spørringen $sql ($kobling->error).";
 					}
